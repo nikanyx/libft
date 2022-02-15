@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   strlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 16:18:31 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 18:43:19 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/15 18:42:59 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/15 18:44:00 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	isdigit(int arg)
+size_t	strlen(const char *str)
 {
-	return (arg > 47 && arg < 58);
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 /*int	main(void)
 {
-	printf("%d\n", isdigit('2'));
+	char	*str = "Hello world!";
+	int		r;
+
+	r = strlen(str);
+	printf("Nr of characters: %d\n", r);
 }*/

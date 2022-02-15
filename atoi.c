@@ -1,23 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   atoi.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 16:18:31 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 18:43:19 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/15 18:45:25 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/15 18:54:19 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	isdigit(int arg)
+int	atoi(const char *str)
 {
-	return (arg > 47 && arg < 58);
+	int	nb;
+	int	cnt;
+
+	nb = 0;
+	cnt = 0;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	while (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			cnt++;
+		str++;
+	}
+	while (*str > 47 && *str < 58)
+	{
+		nb *= 10;
+		nb += str[0] - 48;
+		str++;
+	}
+	if (cnt % 2)
+		nb *= -1;
+	return (nb);
 }
 
 /*int	main(void)
 {
-	printf("%d\n", isdigit('2'));
+	printf("atoi: %d\n", atoi("\t +214748364"));
 }*/
