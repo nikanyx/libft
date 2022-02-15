@@ -1,44 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   isascii.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 18:45:25 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 18:54:19 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/15 18:43:08 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/15 19:29:04 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	atoi(const char *str)
+int	ft_isascii(int arg)
 {
-	int	nb;
-	int	cnt;
-
-	nb = 0;
-	cnt = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	while (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			cnt++;
-		str++;
-	}
-	while (*str > 47 && *str < 58)
-	{
-		nb *= 10;
-		nb += str[0] - 48;
-		str++;
-	}
-	if (cnt % 2)
-		nb *= -1;
-	return (nb);
+	return (arg >= 0 && arg <= 177);
 }
 
 /*int	main(void)
 {
-	printf("atoi: %d\n", atoi("\t +214748364"));
+	printf("%d\n", ft_isascii('\t'));
 }*/

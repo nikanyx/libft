@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   strlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 15:25:40 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 18:43:16 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/15 18:42:59 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/15 19:29:12 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	isalpha(int arg)
+size_t	ft_strlen(const char *str)
 {
-	return ((arg > 64 && arg < 91) || (arg > 96 && arg < 123));
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 /*int	main(void)
 {
-	printf("%d\n", isalpha('b'));
+	printf("Nr of characters: %zu\n", ft_strlen("Hello world!"));
 }*/

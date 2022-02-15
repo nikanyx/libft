@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   isalnum.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 18:42:59 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 18:44:00 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/14 16:28:35 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/15 19:29:02 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t	strlen(const char *str)
+int	ft_isalnum(int arg)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	return ((arg > 47 && arg < 58)
+		|| (arg > 64 && arg < 91) || (arg > 96 && arg < 123));
 }
 
 /*int	main(void)
 {
-	char	*str = "Hello world!";
-	int		r;
-
-	r = strlen(str);
-	printf("Nr of characters: %d\n", r);
+	printf("%d\n", ft_isalnum('.'));
 }*/

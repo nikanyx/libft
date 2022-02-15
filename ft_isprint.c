@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   isprint.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 16:28:35 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 18:43:15 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/15 18:43:01 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/15 19:29:07 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	isalnum(int arg)
+int	ft_isascii(int arg)
 {
-	return ((arg > 47 && arg < 58)
-		|| (arg > 64 && arg < 91) || (arg > 96 && arg < 123));
+	return (arg > 31 && arg < 127);
 }
 
 /*int	main(void)
 {
-	printf("%d\n", isalnum('.'));
+	printf("%d\n", ft_isascii(' '));
 }*/

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   isalpha.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 16:18:31 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 18:43:19 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/14 15:25:40 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/15 19:29:03 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	isdigit(int arg)
+int	ft_isalpha(int arg)
 {
-	return (arg > 47 && arg < 58);
+	return ((arg > 64 && arg < 91) || (arg > 96 && arg < 123));
 }
 
 /*int	main(void)
 {
-	printf("%d\n", isdigit('2'));
+	printf("%d\n", ft_isalpha('b'));
 }*/
