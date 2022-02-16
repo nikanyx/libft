@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 20:02:05 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/16 16:13:36 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/16 15:50:08 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/16 16:12:56 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	fix;
 
-	fix = n;
-	while (n-- > 0)
-		*(char *)s++ = c;
-	return (s - fix);
+	fix = len;
+	if (src < dst)
+		while (--len)
+			((char *)dst)[len] = ((char *)src)[len];
+	else
+		while (--len)
+			*(char *)dst++ = *(char *)src++;
+	return (dst - (fix - 1));
 }
 
 /*int	main(void)
 {
-	char	s[10];
+	const char	src[20] = "Adeus pessoal";
+	char		dest[12] = "Hello world";
 
-	printf("ft: %s\n", ft_memset(s, 'r', 5));
+	printf("orig. string: %s, %s\n", dest, src);
+	ft_memmove(dest, src, 13);
+	printf("after memcpy: %s, %s\n", dest, src);
 }*/
