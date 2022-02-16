@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 18:45:25 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/16 14:15:25 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/16 12:42:59 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/16 13:51:56 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_atoi(const char *str)
+void	ft_bzero(void *s, size_t n)
 {
-	int	nb;
-	int	neg;
+	size_t	fix;
 
-	nb = 0;
-	neg = 1;
-	while ((*str > 8 && *str < 14) || *str == 32)
-		str++;
-	if (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			neg = -1;
-		str++;
-	}
-	while (*str > 47 && *str < 58)
-	{
-		nb = nb * 10 + (str[0] - 48);
-		str++;
-	}
-	return (nb * neg);
+	fix = n;
+	while (n-- > 0)
+		*(char *)s++ = '\0';
+	return (s - fix);
 }
 
 /*int	main(void)
 {
-	printf("ft_a: %d\n", ft_atoi("\t -2147483648"));
-	printf("atoi: %d\n", atoi("\t -2147483648"));
+	char	s[10] = "HelloWorld";
+
+	ft_bzero(s, 10);
+	printf("ft: %s\n", s);
 }*/

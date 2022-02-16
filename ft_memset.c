@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 20:02:05 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 23:03:07 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/16 13:52:00 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t	fix;
 
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = c;
-		i++;
-	}
-	return (s);
+	fix = n;
+	while (n-- > 0)
+		*(char *)s++ = c;
+	return (s - fix);
 }
 
 /*int	main(void)
 {
 	char	s[10];
 
-	printf("ft: %s\n", ft_memset(s, 'r', 8));
+	printf("ft: %s\n", ft_memset(s, 'r', 5));
 }*/

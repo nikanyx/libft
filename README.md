@@ -16,8 +16,8 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~isprint~~  
 * ~~strlen~~  
 * ~~memset~~  
-* bzero  
-* memcpy  
+* ~~bzero~~  
+* ~~memcpy~~  
 * memmove  
 * strlcpy  
 * ~~strlcat~~  

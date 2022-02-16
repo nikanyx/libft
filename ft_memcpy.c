@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 18:45:25 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/16 14:15:25 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/16 12:58:52 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/16 13:51:57 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
-int	ft_atoi(const char *str)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	int	nb;
-	int	neg;
-
-	nb = 0;
-	neg = 1;
-	while ((*str > 8 && *str < 14) || *str == 32)
-		str++;
-	if (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			neg = -1;
-		str++;
-	}
-	while (*str > 47 && *str < 58)
-	{
-		nb = nb * 10 + (str[0] - 48);
-		str++;
-	}
-	return (nb * neg);
+	while (n-- > 0)
+		*(char *)dst++ = *(char *)src++;
+	return (dst);
 }
 
 /*int	main(void)
 {
-	printf("ft_a: %d\n", ft_atoi("\t -2147483648"));
-	printf("atoi: %d\n", atoi("\t -2147483648"));
+	const char	src[20] = "Adeus pessoal";
+	char		dest[12] = "Hello world";
+
+	printf("orig. string: %s\n", dest);
+	ft_memcpy(dest, src, 5);
+	printf("after memcpy: %s\n", dest);
 }*/
