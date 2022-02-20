@@ -24,7 +24,7 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~toupper~~  
 * ~~tolower~~  
 * ~~strchr~~  
-* strrchr  
+* ~~strrchr~~  
 * ~~strncmp~~  
 * memchr  
 * memcmp  
