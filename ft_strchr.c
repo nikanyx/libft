@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:10:15 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/20 14:57:25 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/20 15:20:01 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 	ptr = (char *)s;
 	cnt = ft_strlen(s) + 1;
 	while (cnt-- > 0)
-		if (*ptr++ == c)
+		if (*ptr++ == (char)c)
 			return (--ptr);
 	return (NULL);
 }
@@ -30,6 +30,6 @@ char	*ft_strchr(const char *s, int c)
 	const char	src[20] = "Adeus pessoal";
 	char		*ptr;
 
-	ptr = ft_strchr(src, 'z');
+	ptr = ft_strchr(src, 'd');
 	printf("%s\n%p\n", ptr, ptr);
 }*/

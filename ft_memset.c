@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 20:02:05 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/16 16:13:36 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/20 15:20:00 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	fix = n;
 	while (n-- > 0)
-		*(char *)s++ = c;
+		*(char *)s++ = (unsigned char)c;
 	return (s - fix);
 }
 
