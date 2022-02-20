@@ -30,3 +30,18 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~memcmp~~  
 * ~~strnstr~~  
 * ~~atoi~~  
+* ~~calloc~~  
+* ~~strdup~~  
+
+Additional:
+* ft_substr
+* ft_strjoin
+* ft_strtrim
+* ft_split
+* ft_itoa
+* ft_strmapi
+* ft_striteri
+* ft_putchar_fd
+* ft_putstr_fd
+* ft_putendl_fd
+* ft_putnbr_fd
