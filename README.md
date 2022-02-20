@@ -19,11 +19,11 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~bzero~~  
 * ~~memcpy~~  
 * ~~memmove~~  
-* strlcpy  
+* ~~strlcpy~~  
 * ~~strlcat~~  
 * ~~toupper~~  
 * ~~tolower~~  
-* strchr  
+* ~~strchr~~  
 * strrchr  
 * ~~strncmp~~  
 * memchr  
