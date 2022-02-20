@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 19:02:17 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 19:29:11 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/20 17:29:29 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_size;
 	size_t	dest_size;
@@ -46,8 +36,8 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 
 /*int	main(void)
 {
-	char	a[] = "hello";
-	char	b[] = " world";
+	char	a[10] = "hello";
+	char	b[10] = " world";
 	int		result;
 
 	result = ft_strlcat(a, b, 8);

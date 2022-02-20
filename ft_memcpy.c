@@ -6,13 +6,13 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 12:58:52 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/20 15:34:41 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/20 17:27:11 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	while (n-- > 0)
 		*(char *)dst++ = *(char *)src++;
