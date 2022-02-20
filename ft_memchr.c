@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 12:58:52 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/20 15:34:41 by cmachado         ###   ########.fr       */
+/*   Created: 2022/02/20 16:01:26 by cmachado          #+#    #+#             */
+/*   Updated: 2022/02/20 16:13:31 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
+	char	*ptr;
+
+	ptr = (char *)s;
 	while (n-- > 0)
-		*(char *)dst++ = *(char *)src++;
-	return (dst);
+		if (*ptr++ == (unsigned char)c)
+			return (--ptr);
+	return (NULL);
 }
 
 /*int	main(void)
 {
 	const char	src[20] = "Adeus pessoal";
-	char		dest[12] = "Hello world";
+	char		*ptr;
 
-	printf("orig. string: %s\n", dest);
-	ft_memcpy(dest, src, 5);
-	printf("after memcpy: %s\n", dest);
+	ptr = ft_memchr(src, 's', 4);
+	printf("%s\n%p\n", ptr, ptr);
 }*/
