@@ -26,7 +26,7 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~strchr~~  
 * ~~strrchr~~  
 * ~~strncmp~~  
-* memchr  
-* memcmp  
-* strnstr  
+* ~~memchr~~  
+* ~~memcmp~~  
+* ~~strnstr~~  
 * ~~atoi~~  
