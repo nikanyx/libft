@@ -34,8 +34,8 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~strdup~~  
 
 Additional:
-* ft_substr
-* ft_strjoin
+* ~~ft_substr~~
+* ~~ft_strjoin~~
 * ft_strtrim
 * ft_split
 * ft_itoa
