@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 16:01:26 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/20 16:13:31 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:53:37 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -22,12 +22,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (--ptr);
 	return (NULL);
 }
-
-/*int	main(void)
-{
-	const char	src[20] = "Adeus pessoal";
-	char		*ptr;
-
-	ptr = ft_memchr(src, 's', 4);
-	printf("%s\n%p\n", ptr, ptr);
-}*/

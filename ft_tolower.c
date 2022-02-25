@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 19:44:46 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 19:45:49 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:00:49 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
@@ -19,8 +19,3 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
-
-/*int	main(void)
-{
-	printf("%c\n", ft_tolower('G'));
-}*/

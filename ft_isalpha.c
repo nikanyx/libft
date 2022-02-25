@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:25:40 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 19:29:03 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:51:30 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalpha(int arg)
 {
 	return ((arg > 64 && arg < 91) || (arg > 96 && arg < 123));
 }
-
-/*int	main(void)
-{
-	printf("%d\n", ft_isalpha('b'));
-}*/

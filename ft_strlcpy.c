@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 16:11:22 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/20 17:32:29 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:57:26 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -25,11 +25,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (len);
 }
-
-/*int	main(void)
-{
-	const char	src[20] = "Adeus pessoal";
-	char		dest[10] = "Hello all";
-
-	printf("%lu\n%s\n", ft_strlcpy(dest, src, 5), dest);
-}*/

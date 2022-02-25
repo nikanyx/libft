@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 16:28:35 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 19:29:02 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:50:58 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalnum(int arg)
 {
 	return ((arg > 47 && arg < 58)
 		|| (arg > 64 && arg < 91) || (arg > 96 && arg < 123));
 }
-
-/*int	main(void)
-{
-	printf("%d\n", ft_isalnum('.'));
-}*/

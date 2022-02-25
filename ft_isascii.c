@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 18:43:08 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 19:29:04 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:52:03 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isascii(int arg)
 {
 	return (arg >= 0 && arg <= 177);
 }
-
-/*int	main(void)
-{
-	printf("%d\n", ft_isascii('\t'));
-}*/

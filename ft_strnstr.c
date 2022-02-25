@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 16:53:51 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/20 17:23:07 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:58:31 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -35,13 +35,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-/*int	main(void)
-{
-	const char	haystack[20] = "Hello world";
-	const char	needle[4] = "or";
-	char		*ptr;
-
-	ptr = ft_strnstr(haystack, needle, 20);
-	printf("%s\n", ptr);
-}*/

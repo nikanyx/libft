@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 19:02:17 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/20 17:29:29 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:56:48 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -33,14 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dest_size] = '\0';
 	return (result);
 }
-
-/*int	main(void)
-{
-	char	a[10] = "hello";
-	char	b[10] = " world";
-	int		result;
-
-	result = ft_strlcat(a, b, 8);
-	printf("my str: %s\n", a);
-	printf("my ret: %d\n", result);
-}*/

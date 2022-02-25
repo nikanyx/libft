@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 19:39:11 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 19:43:30 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:01:33 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -19,8 +19,3 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
-
-/*int	main(void)
-{
-	printf("%c\n", ft_toupper('~'));
-}*/

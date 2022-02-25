@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 15:05:08 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/20 15:20:02 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:59:55 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -24,12 +24,3 @@ char	*ft_strrchr(const char *s, int c)
 			return (&ptr[cnt]);
 	return (NULL);
 }
-
-/*int	main(void)
-{
-	const char	src[20] = "Adeus pessoal";
-	char		*ptr;
-
-	ptr = ft_strrchr(src, 's');
-	printf("%s\n%p\n", ptr, ptr);
-}*/

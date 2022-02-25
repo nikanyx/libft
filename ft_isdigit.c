@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 16:18:31 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 19:29:05 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:53:07 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int arg)
 {
 	return (arg > 47 && arg < 58);
 }
-
-/*int	main(void)
-{
-	printf("%d\n", ft_isdigit('2'));
-}*/

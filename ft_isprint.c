@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isprint.c                                          :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 18:43:01 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/15 19:29:07 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:53:05 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_isascii(int arg)
+int	ft_isprint(int arg)
 {
 	return (arg > 31 && arg < 127);
 }
-
-/*int	main(void)
-{
-	printf("%d\n", ft_isascii(' '));
-}*/
