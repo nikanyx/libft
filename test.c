@@ -41,7 +41,7 @@
 /*int	main(void)
 {
 	printf("%d\n", ft_isascii('\t'));
-}*/
+*/
 
 //ft_isdigit.c
 /*int	main(void)
@@ -193,8 +193,19 @@
 	printf("%s\n%p\n", ptr, ptr);
 }*/
 
-//ft_substr.c
+//ft_strtrim.c
 int	main(void)
+{
+	const char	s1[] = "..Hello world..";
+	const char	set[] = "..";
+	char		*ptr;
+
+	ptr = ft_strtrim(s1, set);
+	printf("string: %s\n", ptr);
+}
+
+//ft_substr.c
+/*int	main(void)
 {
 	char	*src = "hello world and beyond";
 	char	*new;
@@ -202,7 +213,7 @@ int	main(void)
 	printf("Old string: %s\n", src);
 	new = ft_substr(src, 3, 7);
 	printf("New string: %s\n", new);
-}
+}*/
 
 //ft_tolower.c
 /*int	main(void)
