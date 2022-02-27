@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 19:31:11 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/26 16:12:02 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/27 19:03:37 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
 void	*ft_memset(void *s, int c, size_t n);
+
+char	**ft_split(char const *s, char c);
 
 char	*ft_strchr(const char *s, int c);
 

@@ -104,6 +104,19 @@
 	printf("ft: %s\n", ft_memset(s, 'r', 5));
 }*/
 
+//ft_split.c
+int	main(void)
+{
+	const char	s[] = "Today.is a.beautiful.day";
+	char		c = '.';
+	char		**ptr;
+
+	ptr = ft_split(s, c);
+	printf("original: '%s'\n", s);
+	printf("delimiter: '%c'\n", c);
+	printf("strings: '%s', '%s', '%s', '%s'\n", ptr[0], ptr[1], ptr[2], ptr[3]);
+}
+
 //ft_strchr.c
 /*int	main(void)
 {
@@ -194,7 +207,7 @@
 }*/
 
 //ft_strtrim.c
-int	main(void)
+/*int	main(void)
 {
 	const char	s1[] = "..Hello world..";
 	const char	set[] = "..";
@@ -202,7 +215,7 @@ int	main(void)
 
 	ptr = ft_strtrim(s1, set);
 	printf("string: %s\n", ptr);
-}
+}*/
 
 //ft_substr.c
 /*int	main(void)

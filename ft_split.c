@@ -6,70 +6,46 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:28:14 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/26 17:55:51 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/02/27 19:03:23 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+static int	num_del(char const *s, char c)
 {
-	while (n-- > 0)
-		*(char *)dst++ = *(char *)src++;
-	return (dst);
-}
+	int	i;
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*s2;
-
-	s2 = (char *) malloc(len + 1);
-	if (!s2)
-		return (NULL);
-	ft_memcpy(s2, s + start, len);
-	s2[len] = '\0';
-	return (s2);
+	i = 0;
+	while (*s)
+		if (*s++ == c)
+			i++;
+	i++;
+	return (i);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**new;
-	/*int		i;
+	int		i;
 	int		j;
 	int		k;
 
 	i = 0;
-	k = 0;*/
-	new = NULL;
-	/*while (s[i])
+	k = 0;
+	new = (char **) malloc(sizeof(char **) * num_del(s, c));
+	if (!new)
+		return (NULL);
+	while (s[i])
 	{
 		j = 0;
-		while (s[i++] != c)
-			j++;
-		new = ft_substr(s, i - 1 - j, j);
-		if (!new++)
-			return (NULL);
-	}
-	return (new);*/
-	while (*s)
-	{
-		if (*s != c)
-			*(char *)new++ = *(char *)s++;
-		else
+		while (s[i] && s[i] != c)
 		{
-			*(char *)new++ = '\0';
-			*s++;
+			j++;
+			i++;
 		}
+		new[k++] = ft_substr(s, i - j, j);
+		i++;
 	}
-}
-
-int	main(void)
-{
-	const char	s[] = "Today.is a.beautiful.day";
-	char		c = '.';
-	char		**ptr;
-
-	ptr = ft_split(s, c);
-	printf("string: %s\n", ptr[0]);
+	return (new);
 }
