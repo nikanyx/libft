@@ -6,18 +6,18 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 19:26:29 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/01 20:38:51 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/01 20:40:09 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-static int	num_dig(int n, int i)
+static int	num_dig(int n, int neg)
 {
 	int	dig;
 
-    dig = 0;
+	dig = 0;
 	while (n * neg > 0)
 	{
 		n /= 10;
