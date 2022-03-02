@@ -1,55 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/01 19:26:29 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/02 20:38:13 by cmachado         ###   ########.fr       */
+/*   Created: 2022/03/02 20:03:30 by cmachado          #+#    #+#             */
+/*   Updated: 2022/03/02 20:58:32 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	num_dig(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	dig;
-
-	dig = 0;
-	while (n != 0)
-	{
-		n /= 10;
-		dig++;
-	}
-	return (dig);
-}
-
-char	*ft_itoa(int n)
-{
-	int		neg;
 	char	*new;
 	int		i;
 
-	neg = 1;
-	i = num_dig(n);
-	if (n <= 0)
-	{
-		neg = -1;
-		i++;
-	}
+	i = ft_strlen(s);
 	new = (char *) malloc(i + 1);
 	if (!new)
 		return (NULL);
-	if (n == 0)
-		new[0] = '0';
-	else if (n < 0)
-		new[0] = '-';
-	new[i--] = '\0';
-	while (i > 0)
-	{
-		new[i--] = neg * (n % 10) + 48;
-		n /= 10;
-	}
+	new[i] = '\0';
+	while (--i >= 0)
+		new[i] = f(i, s[i]);
 	return (new);
 }

@@ -185,6 +185,24 @@
 	printf("Nr of characters: %zu\n", ft_strlen("Hello world!"));
 }*/
 
+//ft_strmapi.c
+/*char	upp(unsigned int i, char c)
+{
+	i = 0;
+	if (c > 96 && c < 123)
+		return (c - 32);
+	else
+		return (c);
+}
+
+int	main(void)
+{
+	char	(*f)(unsigned int, char);
+	char	*s = "hello world and universe";
+
+	printf("%s\n", ft_strmapi(s, upp));
+}*/
+
 //ft_strncmp.c
 /*int	main(void)
 {
