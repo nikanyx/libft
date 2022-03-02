@@ -55,6 +55,12 @@
 	printf("%d\n", ft_isprint(' '));
 }*/
 
+//ft_itoa.c
+/*int	main(void)
+{
+	printf("%s\n", ft_itoa(1456));
+}*/
+
 //ft_memchr.c
 /*int	main(void)
 {
@@ -105,7 +111,7 @@
 }*/
 
 //ft_split.c
-int	main(void)
+/*int	main(void)
 {
 	const char	s[] = "Today.is a.beautiful.day";
 	char		c = '.';
@@ -115,7 +121,7 @@ int	main(void)
 	printf("original: '%s'\n", s);
 	printf("delimiter: '%c'\n", c);
 	printf("strings: '%s', '%s', '%s', '%s'\n", ptr[0], ptr[1], ptr[2], ptr[3]);
-}
+}*/
 
 //ft_strchr.c
 /*int	main(void)

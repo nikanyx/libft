@@ -6,28 +6,23 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 19:26:29 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/01 20:40:09 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/02 19:51:53 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-static int	num_dig(int n, int neg)
+static int	num_dig(int n)
 {
 	int	dig;
 
 	dig = 0;
-	while (n * neg > 0)
+	while (n != 0)
 	{
 		n /= 10;
 		dig++;
 	}
 	return (dig);
-	/*if (n > 10 || n < -10)
-		return (i++);
-	else
-		return (num_dig(n / 10, i++));*/
 }
 
 char	*ft_itoa(int n)
@@ -41,8 +36,10 @@ char	*ft_itoa(int n)
 	if (n <= 0)
 	{
 		neg = -1;
-		new = (char *) malloc(i + 2);
-		if (n != 0)
+		new = (char *) malloc(++i + 1);
+		if (n == 0)
+			new[0] = '0';
+		else
 			new[0] = '-';
 	}
 	else
@@ -54,9 +51,4 @@ char	*ft_itoa(int n)
 		n /= 10;
 	}
 	return (new);
-}
-
-int	main(void)
-{
-	printf("%s\n", ft_itoa(1456));
 }

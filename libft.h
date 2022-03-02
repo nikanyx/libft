@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 19:31:11 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/27 19:03:37 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/02 19:52:14 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int		ft_isascii(int arg);
 int		ft_isdigit(int arg);
 
 int		ft_isprint(int arg);
+
+char	*ft_itoa(int n);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
