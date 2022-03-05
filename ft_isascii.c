@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 18:43:08 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/25 22:52:03 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/05 18:13:32 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isascii(int arg)
 {
-	return (arg >= 0 && arg <= 177);
+	return (arg >= 0 && arg <= 127);
 }

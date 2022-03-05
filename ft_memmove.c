@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 15:50:08 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/25 22:54:23 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/05 18:11:48 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,24 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	fix;
+	size_t	i;
 
-	fix = len;
+	i = 0;
 	if (src < dst)
-		while (--len)
-			((char *)dst)[len] = ((char *)src)[len];
+	{
+		while (len)
+		{
+			((char *)dst)[len - 1] = ((char *)src)[len - 1];
+			len--;
+		}
+	}
 	else
-		while (--len)
-			*(char *)dst++ = *(char *)src++;
-	return (dst - (fix - 1));
+	{
+		while (i < len)
+		{
+			((char *)dst)[i] = ((char *)src)[i];
+			i++;
+		}
+	}
+	return (dst);
 }

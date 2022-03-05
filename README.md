@@ -19,7 +19,7 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~bzero~~  
 * ~~memcpy~~  
 * ~~memmove~~  
-* ~~strlcpy~~  
+* strlcpy  
 * ~~strlcat~~  
 * ~~toupper~~  
 * ~~tolower~~  
@@ -28,20 +28,23 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~strncmp~~  
 * ~~memchr~~  
 * ~~memcmp~~  
-* ~~strnstr~~  
+* strnstr  
 * ~~atoi~~  
 * ~~calloc~~  
 * ~~strdup~~  
 
 Additional:
-* ~~ft_substr~~
-* ~~ft_strjoin~~
-* ~~ft_strtrim~~
-* ~~ft_split~~
+* ft_substr
+* ft_strjoin
+* ft_strtrim
+* ft_split
 * ~~ft_itoa~~
 * ~~ft_strmapi~~
-* ft_striteri
-* ft_putchar_fd
-* ft_putstr_fd
+* ~~ft_striteri~~
+* ~~ft_putchar_fd~~
+* ~~ft_putstr_fd~~
 * ft_putendl_fd
 * ft_putnbr_fd
+
+*First tester run  
+10 KO (memmove, isascii, strlcpy, strnstr, substr, strjoin, strtrim, split, putendl_fd, putnbr_fd)  
