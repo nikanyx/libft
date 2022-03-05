@@ -110,6 +110,30 @@
 	printf("ft: %s\n", ft_memset(s, 'r', 5));
 }*/
 
+//ft_putchar_fd.c
+/*int	main(void)
+{
+	ft_putchar_fd('h', 1);
+}*/
+
+//ft_putendl_fd.c
+/*int	main(void)
+{
+	ft_putendl_fd("hello world", 1);
+}*/
+
+//ft_putnbr_fd.c
+/*int	main(void)
+{
+	ft_putnbr_fd(1584, 1);
+}*/
+
+//ft_putstr_fd.c
+/*int	main(void)
+{
+	ft_putstr_fd("hello world", 1);
+}*/
+
 //ft_split.c
 /*int	main(void)
 {
