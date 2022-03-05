@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 16:19:37 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/05 16:38:16 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/05 21:03:52 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	write(fd, &*s, ft_strlen(s));
-	write(1, "\n", 1);
+	write(fd, "\n", 1);
 }

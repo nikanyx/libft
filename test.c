@@ -100,6 +100,16 @@
 	printf("orig. string: %s, %s\n", dest, src);
 	ft_memmove(dest, src, 13);
 	printf("after memcpy: %s, %s\n", dest, src);
+	
+	OR
+
+	char dest[21] = "a shiny white sphere";
+	char *ptr = target + 8;
+	char *src = target + 2;
+	
+	printf("orig. string: %s\n", dest);
+	ft_memmove(ptr, src, 5);
+	printf("after memcpy: %s\n", dest);
 }*/
 
 //ft_memset.c

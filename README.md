@@ -2,12 +2,12 @@
 
 first project at 42 lisboa. start date 14/02/2022.
 
-*Libft  
-Your very first own library*
+*Libft*  
+*Your very first own library*
 
-*Summary:  
-This project is about coding a C library.  
-It will contain a lot of general purpose functions your programs will rely upon.*
+*Summary:*  
+*This project is about coding a C library.*  
+*It will contain a lot of general purpose functions your programs will rely upon.*
 
 * ~~isalpha~~  
 * ~~isdigit~~  
@@ -19,7 +19,7 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~bzero~~  
 * ~~memcpy~~  
 * ~~memmove~~  
-* strlcpy  
+* ~~strlcpy~~  
 * ~~strlcat~~  
 * ~~toupper~~  
 * ~~tolower~~  
@@ -28,14 +28,14 @@ It will contain a lot of general purpose functions your programs will rely upon.
 * ~~strncmp~~  
 * ~~memchr~~  
 * ~~memcmp~~  
-* strnstr  
+* ~~strnstr~~  
 * ~~atoi~~  
 * ~~calloc~~  
 * ~~strdup~~  
 
 Additional:
-* ft_substr
-* ft_strjoin
+* ~~ft_substr~~
+* ~~ft_strjoin~~
 * ft_strtrim
 * ft_split
 * ~~ft_itoa~~
@@ -46,5 +46,5 @@ Additional:
 * ft_putendl_fd
 * ft_putnbr_fd
 
-*First tester run  
+**First tester run**  
 10 KO (memmove, isascii, strlcpy, strnstr, substr, strjoin, strtrim, split, putendl_fd, putnbr_fd)  
