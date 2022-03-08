@@ -267,8 +267,8 @@ int	main(void)
 //ft_strtrim.c
 /*int	main(void)
 {
-	const char	s1[] = "..Hello world..";
-	const char	set[] = "..";
+	const char	s1[] = "..*Hello world*..";
+	const char	set[] = ".*";
 	char		*ptr;
 
 	ptr = ft_strtrim(s1, set);

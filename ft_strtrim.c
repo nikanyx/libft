@@ -6,25 +6,46 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 14:19:51 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/26 16:11:58 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/08 21:20:32 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t	index(char const *s1, char const *set, size_t i, int dir)
+{
+	size_t	j;
+
+	j = 0;
+	while (set[j] && s1[i])
+	{
+		if (s1[i] == set[j])
+		{
+			j = 0;
+			i += dir;
+		}
+		else
+			j++;
+	}
+	return (i);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len_s1;
-	size_t	len_set;
 	char	*new;
+	size_t	lens1;
+	size_t	start;
 
-	len_s1 = ft_strlen(s1);
-	len_set = ft_strlen(set);
-	new = (char *) malloc(len_s1 - len_set * 2 + 1);
-	if (!new)
-		return (NULL);
-	if (ft_memcmp(s1, set, len_set) == 0)
-		if (ft_memcmp(s1 + len_s1 - len_set, set, len_set) == 0)
-			ft_memcpy(new, s1 + len_set, len_s1 - len_set * 2);
+	if (!s1 || !set)
+	{
+		new = ft_strdup(s1);
+		return (new);
+	}
+	lens1 = ft_strlen(s1);
+	start = index(s1, set, 0, 1);
+	if (start == lens1)
+		new = calloc(1, 1);
+	else
+		new = ft_substr(s1, start, index(s1, set, lens1 - 1, -1) - start + 1);
 	return (new);
 }
