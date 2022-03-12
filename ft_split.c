@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:28:14 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/27 19:03:23 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/12 20:36:54 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,36 +16,46 @@ static int	num_del(char const *s, char c)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while (*s)
-		if (*s++ == c)
+		if (*s++ == c && *s != c && *s)
 			i++;
-	i++;
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+static void	new_strs(char const *s, char c, char **new)
 {
-	char	**new;
 	int		i;
 	int		j;
 	int		k;
 
 	i = 0;
 	k = 0;
-	new = (char **) malloc(sizeof(char **) * num_del(s, c));
-	if (!new)
-		return (NULL);
 	while (s[i])
 	{
 		j = 0;
-		while (s[i] && s[i] != c)
+		if (s[i] && s[i] != c)
 		{
-			j++;
-			i++;
+			while (s[i] != c && s[i])
+			{
+				j++;
+				i++;
+			}
+			new[k++] = ft_substr(s, i - j, j);
 		}
-		new[k++] = ft_substr(s, i - j, j);
-		i++;
+		else
+			i++;
 	}
+	new[k] = NULL;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**new;
+
+	new = (char **) malloc(sizeof(char **) * num_del(s, c));
+	if (!new)
+		return (NULL);
+	new_strs(s, c, new);
 	return (new);
 }

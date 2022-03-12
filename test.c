@@ -180,6 +180,23 @@
 	printf("New str address: %p\n", new);
 }*/
 
+//ft_striteri.c
+/*void	next(unsigned int i, char *c)
+{
+	if (*c > 47 && *c < 57 && *c + i < 57)
+		*c += i;
+	else if (*c > 96 && *c < 123)
+		*c -= 32;
+}
+
+int	main(void)
+{
+	char	s[] = "abcde0123";
+
+	ft_striteri(s, next);
+	printf("%s\n", s);
+}*/
+
 //ft_strjoin.c
 /*int	main(void)
 {

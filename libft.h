@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 19:31:11 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/05 16:40:24 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/12 21:19:36 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 
 char	*ft_strdup(const char *s1);
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 char	*ft_strjoin(char const *s1, char const *s2);
 
