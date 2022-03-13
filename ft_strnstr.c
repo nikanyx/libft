@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 16:53:51 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/05 20:05:55 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/13 00:06:29 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			if (!(needle[j + 1]))
 				return (&ptr[i]);
 			j++;
-			len--;
 		}
 		i++;
 	}

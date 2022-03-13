@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 18:57:02 by cmachado          #+#    #+#             */
-/*   Updated: 2022/02/25 22:58:06 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/12 23:33:21 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		if (s1[i] == s2[i])
 			i++;
 		else
-			diff = s1[i] - s2[i];
+			diff = (unsigned char) s1[i] - (unsigned char) s2[i];
 	}
 	return (diff);
 }

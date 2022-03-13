@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:28:14 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/12 20:36:54 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/13 00:26:17 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**new;
 
+	if (!s)
+		return (NULL);
 	new = (char **) malloc(sizeof(char **) * num_del(s, c));
 	if (!new)
 		return (NULL);

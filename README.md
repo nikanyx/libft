@@ -51,3 +51,13 @@ Additional:
 
 **Second tester run - Tripouille**  
 All OK  
+
+**Third tester run - Unit**  
+5 KO (memcpy, memmove, memchr, strncmp, strnstr)  
+8 not protected (substr, strjoin, strtrim, split, strmapi, striteri, putstr_fd, putendl_fd)
+
+**Third tester run - Unit**   
+All OK  
+
+**Fourth tester run - War Machine**   
+~~3~~2 KO (strlcat, ~~strtrim~~, split)  

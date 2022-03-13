@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 14:19:51 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/08 21:20:32 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/13 00:31:48 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	lens1;
 	size_t	start;
 
-	if (!s1 || !set)
+	if (!set)
 	{
 		new = ft_strdup(s1);
 		return (new);
 	}
+	if (!s1)
+		return (NULL);
 	lens1 = ft_strlen(s1);
 	start = index(s1, set, 0, 1);
 	if (start == lens1)

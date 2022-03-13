@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 15:50:08 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/05 18:11:48 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/12 22:29:02 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (!dst && !src)
+		return (NULL);
 	if (src < dst)
 	{
 		while (len)
