@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 14:19:51 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/13 00:31:48 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/14 22:05:16 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	lens1 = ft_strlen(s1);
 	start = index(s1, set, 0, 1);
 	if (start == lens1)
-		new = calloc(1, 1);
+		new = ft_calloc(1, 1);
 	else
 		new = ft_substr(s1, start, index(s1, set, lens1 - 1, -1) - start + 1);
 	return (new);
