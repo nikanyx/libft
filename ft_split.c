@@ -6,13 +6,13 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:28:14 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/13 00:26:17 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/15 20:02:38 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	num_del(char const *s, char c)
+static int	delim(char const *s, char c)
 {
 	int	i;
 
@@ -20,7 +20,19 @@ static int	num_del(char const *s, char c)
 	while (*s)
 		if (*s++ == c && *s != c && *s)
 			i++;
-	return (i);
+	return (i + 1);
+}
+
+static char	*cpy_str(char const *s, unsigned int start, size_t len)
+{
+	char	*s2;
+
+	s2 = (char *) malloc(len + 1);
+	if (!s2)
+		return (NULL);
+	ft_memcpy(s2, s + start, len);
+	s2[len] = '\0';
+	return (s2);
 }
 
 static void	new_strs(char const *s, char c, char **new)
@@ -41,7 +53,7 @@ static void	new_strs(char const *s, char c, char **new)
 				j++;
 				i++;
 			}
-			new[k++] = ft_substr(s, i - j, j);
+			new[k++] = cpy_str(s, i - j, j);
 		}
 		else
 			i++;
@@ -55,7 +67,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	new = (char **) malloc(sizeof(char **) * num_del(s, c));
+	new = (char **) malloc(sizeof(char **) * delim(s, c));
 	if (!new)
 		return (NULL);
 	new_strs(s, c, new);
