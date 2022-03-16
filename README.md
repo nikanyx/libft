@@ -60,4 +60,10 @@ All OK
 All OK  
 
 **Fifth tester run - War Machine**   
-~~3~~ 1 KO (~~strlcat~~, ~~strtrim~~, split)  
+3 KO (strlcat, strtrim, split)  
+
+**Sixth tester run - War Machine**   
+All OK  
+
+**Seventh tester run - War Machine**   
+3 KO (~~memchr~~, ~~strnstr~~, split)  
