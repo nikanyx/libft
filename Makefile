@@ -6,7 +6,7 @@
 #    By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 20:40:28 by cmachado          #+#    #+#              #
-#    Updated: 2022/03/15 20:06:33 by cmachado         ###   ########.fr        #
+#    Updated: 2022/03/17 21:56:04 by cmachado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c \
 	ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_striteri.c
 
+BONUS_SRC = ft_lstnew.c
+
 CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME) clean
@@ -27,8 +29,13 @@ all: $(NAME) clean
 object:
 	gcc -c $(CFLAGS) $(SRC)
 
+bonus_object:
+	gcc -c $(CFLAGS) $(BONUS_SRC)
+
 $(NAME): object
 	ar -crs $(NAME) *.o
+
+bonus: bonus_object $(NAME)
 
 clean:
 	rm -f *.o
