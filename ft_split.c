@@ -6,7 +6,7 @@
 /*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:28:14 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/15 20:02:38 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/17 20:03:25 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ static int	delim(char const *s, char c)
 	int	i;
 
 	i = 1;
+	if (!*s)
+		return (1);
+	while (*s && *s++ == c)
+		i = 1;
 	while (*s)
 		if (*s++ == c && *s != c && *s)
 			i++;

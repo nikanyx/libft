@@ -65,5 +65,8 @@ All OK
 **Sixth tester run - War Machine**   
 All OK  
 
-**Seventh tester run - War Machine**   
-3 KO (~~memchr~~, ~~strnstr~~, split)  
+**Seventh tester run - Tripouille**   
+3 KO (memchr, strnstr, split)  
+
+**Seventh tester run - ALL**   
+All OK  
