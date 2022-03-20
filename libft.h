@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmachado <cmachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmachado <cmachado@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 19:31:11 by cmachado          #+#    #+#             */
-/*   Updated: 2022/03/17 21:55:46 by cmachado         ###   ########.fr       */
+/*   Updated: 2022/03/20 21:19:03 by cmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,14 @@ typedef struct s_list
 }	t_list;
 
 t_list	*ft_lstnew(void *content);
+
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+int		ft_lstsize(t_list *lst);
+
+t_list	*ft_lstlast(t_list *lst);
+
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 int		ft_atoi(const char *str);
 
